@@ -15604,12 +15604,12 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <lbtr:solicitudSwap>\r\n            <sid>00021755014277995</sid>\r\n            <datosFacilidad>\r\n                <codConcepto>C077</codConcepto>\r\n                <cuentaDestino>11010100020200000000</cuentaDestino>\r\n                <cuentaOrigen>12070100020100000003</cuentaOrigen>\r\n                <montoSolicitado>450</montoSolicitado>\r\n                <numRefOrigen>demo</numRefOrigen>\r\n            </datosFacilidad>\r\n            <firma>estaesmifirma</firma>\r\n        </lbtr:solicitudSwap>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
 						},
 						"url": {
-							"raw": "{{urlLBTRApis}}/LBTRServiceWeb/LBTRSwapDolaresService",
+							"raw": "{{URLCalidad}}/LBTRServiceWeb/LBTRSwapDolaresService",
 							"host": [
-								"{{urlLBTRApis}}"
+								"{{URLCalidad}}"
 							],
 							"path": [
 								"LBTRServiceWeb",
