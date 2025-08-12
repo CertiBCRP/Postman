@@ -15323,6 +15323,88 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Transferencias MN-BCP Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2b59d1e9-00b2-47e1-8e15-61f4acfde65c",
+								"exec": [
+									"let currentDate = new Date();\r",
+									"let entidad = [\"CREDITO\",\"INTERBANK\",\"CITIBANK\",\"SCOTIABANK\",\r",
+									"\"BBVA\",\"NACION\",\"COMERCIO\",\"PICHINCHA\",\"B.I.F.\",\"CREDISCOTIA\",\r",
+									"\"MIBANCO\",\"BCOGNB\",\"FALABELLA\",\"RIPLEY\",\"SANTANDER\",\"ALFINBANCO\",\r",
+									"\"COMPARTAMOS\",\"FIN.OH\",\"FIN.EFECTIVA\",\"FIN.CONFIANZAS.A.A.\",\r",
+									"\"CAJAMETROPOLITANA\",\"CMAC.PIURASAC\",\"CMACMUNICI.TRUJILLO\",\r",
+									"\"CMACAREQUIPA\",\"CMAC.CUZCO\",\"CMAC.HUANCAYO\",\"CMAC.ICA\",\"GMoneyS.A\"]\r",
+									"\r",
+									"let cuenta_destinoMN= [\"11010100020100000000\",\"11010100030100000000\",\"11010100070100000000\",\r",
+									"\"11010100090100000000\",\"11010100110100000000\",\"11020100180100000000\",\"11010100230100000000\",\r",
+									"\"11010100350100000000\",\"11010100380100000000\",\"11030100430100000000\",\"11010100490100000000\",\r",
+									"\"11010100530100000000\",\"11010100540100000000\",\"11010100550100000000\",\"11010100560100000000\",\r",
+									"\"11010100580100000000\",\"11030100910100000000\",\"11030100940100000000\",\"11030100960100000000\",\r",
+									"\"11030100990100000000\",\"11080108000100000000\",\"11080108010100000000\",\"11080108020100000000\",\r",
+									"\"11080108030100000000\",\"11080108060100000000\",\"11080108080100000000\",\"11080108090100000000\",\r",
+									"\"11080109220100000000\"];\r",
+									"\r",
+									"\r",
+									"var contador = pm.environment.get(\"contadorEntidad\");\r",
+									"//Se reinicia contador si esta en el tope (solo se tienen 4 entidades)\r",
+									"if(contador==\"29\"){\r",
+									"    contador=\"0\";\r",
+									"}\r",
+									"var refNuevo = Number.parseInt(contador)+1;\r",
+									"\r",
+									"const x_monto = Math.floor(Math.random() * (200 - 250 + 1)) + 200;\r",
+									"pm.environment.set(\"monto\",x_monto);\r",
+									"pm.environment.set(\"cuentaDestino\", cuenta_destinoMN[contador]);\r",
+									"pm.environment.set(\"contadorEntidad\", refNuevo)\r",
+									"\r",
+									"//Seter referencia de operacion\r",
+									"pm.environment.set(\"ref\",\"C170 BCP-\"+entidad[contador]+currentDate.toLocaleTimeString().substring(0,8))\r",
+									"console.info(\"Detalle de operación \\nEntidad: \"+entidad[contador]+\"\\nOperacion: C261\");"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "44437266-3e668da4-1592-4226-bc4a-037d151294ac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:instruirTransferencia>\r\n         <sid>00021755014277995</sid>\r\n         <datosTransferencia>\r\n            <codConcepto>C170</codConcepto>\r\n            <cuentaDestino>{{cuentaDestino}}</cuentaDestino>\r\n            <cuentaOrigen>11010100020100000000</cuentaOrigen>\r\n            <datosCliente/>\r\n            <fechaLiquidacion>{{date}}</fechaLiquidacion>\r\n            <fechaRefLBTREnlace/>\r\n            <instruccionesPago>Transferencia</instruccionesPago>\r\n            <modalidad/>\r\n            <montoOperacion>{{monto}}</montoOperacion>\r\n            <numRefLBTREnlace/>\r\n            <numRefOrigen>{{ref}}</numRefOrigen>\r\n            <prioridad>8</prioridad>\r\n         </datosTransferencia>\r\n         <firma>867</firma>\r\n      </lbtr:instruirTransferencia>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URLCalidad}}/LBTRServiceWeb/LBTRTransferenciaService",
+							"host": [
+								"{{URLCalidad}}"
+							],
+							"path": [
+								"LBTRServiceWeb",
+								"LBTRTransferenciaService"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "44437266-5832db2d-10f6-4daa-bb7e-0cc2da1a4cc7"
