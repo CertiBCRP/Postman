@@ -15576,7 +15576,20 @@
 		},
 		{
 			"name": "Intradia",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "44437266-5970e927-55c8-437a-b79d-cc9b8402807f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "44437266-5ec5ea69-cd2f-4250-b271-1c32ea923bc3"
 		}
 	]
