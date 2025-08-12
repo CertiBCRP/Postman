@@ -15446,7 +15446,7 @@
 									"\r",
 									"//Seter referencia de operacion\r",
 									"pm.environment.set(\"ref\",\"C101 BCP-\"+entidad[contador]+currentDate.toLocaleTimeString().substring(0,8))\r",
-									""
+									"console.info(\"Detalle de operación \\nEntidad: \"+entidad[contador]+\"\\nOperacion: C101\");"
 								],
 								"type": "text/javascript",
 								"packages": {}
