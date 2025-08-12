@@ -15251,7 +15251,6 @@
 								"id": "2b59d1e9-00b2-47e1-8e15-61f4acfde65c",
 								"exec": [
 									"let currentDate = new Date();\r",
-									"var moment = require('moment');\r",
 									"let entidad = [\"CREDITO\",\"INTERBANK\",\"CITIBANK\",\"SCOTIABANK\",\r",
 									"\"BBVA\",\"NACION\",\"COMERCIO\",\"PICHINCHA\",\"B.I.F.\",\"CREDISCOTIA\",\r",
 									"\"MIBANCO\",\"BCOGNB\",\"FALABELLA\",\"RIPLEY\",\"SANTANDER\",\"ALFINBANCO\",\r",
@@ -15276,13 +15275,13 @@
 									"}\r",
 									"var refNuevo = Number.parseInt(contador)+1;\r",
 									"\r",
-									"const x_monto = Math.floor(Math.random() * 4);\r",
-									"\r",
+									"const x_monto = Math.floor(Math.random() * (30 - 150 + 1)) + min;\r",
+									"pm.environment.set(\"monto\",x_monto);\r",
 									"pm.environment.set(\"cuentaDestino\", cuenta_destinoMN[contador]);\r",
-									"\r",
+									"pm.environment.set(\"contadorEntidad\", refNuevo)\r",
 									"\r",
 									"//Seter referencia de operacion\r",
-									"pm.environment.set(\"ref\",\"Transferencia BCP-\"+entidad[contador]+currentDate.toLocaleTimeString().substring(0,8))\r",
+									"pm.environment.set(\"ref\",\"C170 BCP-\"+entidad[contador]+currentDate.toLocaleTimeString().substring(0,8))\r",
 									"console.info(\"Detalle de operación \\nEntidad: \"+entidad[contador]+\"\\nOperacion: C261\");"
 								],
 								"type": "text/javascript",
@@ -15305,7 +15304,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:instruirTransferencia>\r\n         <sid>00021755014277995</sid>\r\n         <datosTransferencia>\r\n            <codConcepto>C170</codConcepto>\r\n            <cuentaDestino>{{cuentaDestino}}</cuentaDestino>\r\n            <cuentaOrigen>11010100020100000000</cuentaOrigen>\r\n            <datosCliente/>\r\n            <fechaLiquidacion>{{date}}</fechaLiquidacion>\r\n            <fechaRefLBTREnlace/>\r\n            <instruccionesPago>Transferencia</instruccionesPago>\r\n            <modalidad/>\r\n            <montoOperacion>600</montoOperacion>\r\n            <numRefLBTREnlace/>\r\n            <numRefOrigen>{{ref}}</numRefOrigen>\r\n            <prioridad>8</prioridad>\r\n         </datosTransferencia>\r\n         <firma>867</firma>\r\n      </lbtr:instruirTransferencia>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:instruirTransferencia>\r\n         <sid>00021755014277995</sid>\r\n         <datosTransferencia>\r\n            <codConcepto>C170</codConcepto>\r\n            <cuentaDestino>{{cuentaDestino}}</cuentaDestino>\r\n            <cuentaOrigen>11010100020100000000</cuentaOrigen>\r\n            <datosCliente/>\r\n            <fechaLiquidacion>{{date}}</fechaLiquidacion>\r\n            <fechaRefLBTREnlace/>\r\n            <instruccionesPago>Transferencia</instruccionesPago>\r\n            <modalidad/>\r\n            <montoOperacion>{{monto}}</montoOperacion>\r\n            <numRefLBTREnlace/>\r\n            <numRefOrigen>{{ref}}</numRefOrigen>\r\n            <prioridad>8</prioridad>\r\n         </datosTransferencia>\r\n         <firma>867</firma>\r\n      </lbtr:instruirTransferencia>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
 							"options": {
 								"raw": {
 									"language": "xml"
