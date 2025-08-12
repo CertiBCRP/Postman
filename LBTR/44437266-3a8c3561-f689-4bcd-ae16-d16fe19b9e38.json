@@ -15573,6 +15573,11 @@
 			],
 			"id": "44437266-5832db2d-10f6-4daa-bb7e-0cc2da1a4cc7",
 			"description": "Considerar habilitar a la institucion el consumo por webservice para el servicio de transferencia e intradia"
+		},
+		{
+			"name": "Intradia",
+			"item": [],
+			"id": "44437266-5ec5ea69-cd2f-4250-b271-1c32ea923bc3"
 		}
 	]
 }
