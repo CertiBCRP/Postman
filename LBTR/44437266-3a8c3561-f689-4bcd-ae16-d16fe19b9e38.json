@@ -15340,14 +15340,14 @@
 									"\"CAJAMETROPOLITANA\",\"CMAC.PIURASAC\",\"CMACMUNICI.TRUJILLO\",\r",
 									"\"CMACAREQUIPA\",\"CMAC.CUZCO\",\"CMAC.HUANCAYO\",\"CMAC.ICA\",\"GMoneyS.A\"]\r",
 									"\r",
-									"let cuenta_destinoMN= [\"11010100020100000000\",\"11010100030100000000\",\"11010100070100000000\",\r",
-									"\"11010100090100000000\",\"11010100110100000000\",\"11020100180100000000\",\"11010100230100000000\",\r",
-									"\"11010100350100000000\",\"11010100380100000000\",\"11030100430100000000\",\"11010100490100000000\",\r",
-									"\"11010100530100000000\",\"11010100540100000000\",\"11010100550100000000\",\"11010100560100000000\",\r",
-									"\"11010100580100000000\",\"11030100910100000000\",\"11030100940100000000\",\"11030100960100000000\",\r",
-									"\"11030100990100000000\",\"11080108000100000000\",\"11080108010100000000\",\"11080108020100000000\",\r",
-									"\"11080108030100000000\",\"11080108060100000000\",\"11080108080100000000\",\"11080108090100000000\",\r",
-									"\"11080109220100000000\"];\r",
+									"let cuenta_destinoME = [\"12070100020100000003\",\"12070100030100000003\",\"12070100070100000003\",\r",
+									"\"12070100090100000003\",\"12070100110100000003\",\"12070200180100000003\",\"12070100230100000003\",\r",
+									"\"12070100350100000003\",\"12070100380100000003\",\"12070300430100000003\",\"12070100490100000003\",\r",
+									"\"12070100530100000003\",\"12070100540100000003\",\"12070100550100000003\",\"12070100560100000003\",\r",
+									"\"12070100580100000003\",\"12070300910100000003\",\"12070300940100000003\",\"12070300960100000003\",\r",
+									"\"12070300990100000003\",\"12070508000100000003\",\"12070508010100000003\",\"12070508020100000003\",\r",
+									"\"12070508030100000003\",\"12070508060100000003\",\"12070508080100000003\",\"12070508090100000003\",\r",
+									"\"12070509220100000003\"];\r",
 									"\r",
 									"\r",
 									"var contador = pm.environment.get(\"contadorEntidad\");\r",
@@ -15363,7 +15363,7 @@
 									"pm.environment.set(\"contadorEntidad\", refNuevo)\r",
 									"\r",
 									"//Seter referencia de operacion\r",
-									"pm.environment.set(\"ref\",\"C170 BCP-\"+entidad[contador]+currentDate.toLocaleTimeString().substring(0,8))\r",
+									"pm.environment.set(\"ref\",\"C101 BCP-\"+entidad[contador]+currentDate.toLocaleTimeString().substring(0,8))\r",
 									"console.info(\"Detalle de operación \\nEntidad: \"+entidad[contador]+\"\\nOperacion: C261\");"
 								],
 								"type": "text/javascript",
@@ -15386,7 +15386,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:instruirTransferencia>\r\n         <sid>00021755014277995</sid>\r\n         <datosTransferencia>\r\n            <codConcepto>C170</codConcepto>\r\n            <cuentaDestino>{{cuentaDestino}}</cuentaDestino>\r\n            <cuentaOrigen>11010100020100000000</cuentaOrigen>\r\n            <datosCliente/>\r\n            <fechaLiquidacion>{{date}}</fechaLiquidacion>\r\n            <fechaRefLBTREnlace/>\r\n            <instruccionesPago>Transferencia</instruccionesPago>\r\n            <modalidad/>\r\n            <montoOperacion>{{monto}}</montoOperacion>\r\n            <numRefLBTREnlace/>\r\n            <numRefOrigen>{{ref}}</numRefOrigen>\r\n            <prioridad>8</prioridad>\r\n         </datosTransferencia>\r\n         <firma>867</firma>\r\n      </lbtr:instruirTransferencia>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:instruirTransferencia>\r\n         <sid>00021755014277995</sid>\r\n         <datosTransferencia>\r\n            <codConcepto>C101</codConcepto>\r\n            <cuentaDestino>{{cuentaDestino}}</cuentaDestino>\r\n            <cuentaOrigen>12070100020100000003</cuentaOrigen>\r\n            <datosCliente/>\r\n            <fechaLiquidacion>{{date}}</fechaLiquidacion>\r\n            <fechaRefLBTREnlace/>\r\n            <instruccionesPago>Transferencia</instruccionesPago>\r\n            <modalidad/>\r\n            <montoOperacion>{{monto}}</montoOperacion>\r\n            <numRefLBTREnlace/>\r\n            <numRefOrigen>{{ref}}</numRefOrigen>\r\n            <prioridad>8</prioridad>\r\n         </datosTransferencia>\r\n         <firma>867</firma>\r\n      </lbtr:instruirTransferencia>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
 							"options": {
 								"raw": {
 									"language": "xml"
