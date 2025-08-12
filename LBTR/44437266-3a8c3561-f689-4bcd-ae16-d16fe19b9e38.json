@@ -15579,6 +15579,26 @@
 			"item": [
 				{
 					"name": "Intradia BCP",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c2fcfc58-eb74-4f74-8a5d-1221d20ee86d",
+								"exec": [
+									"let currentDate = new Date();\r",
+									"\r",
+									"const x_monto = Math.floor(Math.random() * (200 - 250 + 1)) + 200;\r",
+									"pm.environment.set(\"monto\",x_monto);\r",
+									"\r",
+									"//Seter referencia de operacion\r",
+									"pm.environment.set(\"ref\",\"C170 BCP-\"+entidad[contador]+currentDate.toLocaleTimeString().substring(0,8))\r",
+									"console.info(\"Detalle de operación \\nEntidad: \"+entidad[contador]+\"\\nOperacion: C261\");"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "44437266-5970e927-55c8-437a-b79d-cc9b8402807f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
