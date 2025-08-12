@@ -15578,14 +15578,44 @@
 			"name": "Intradia",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Intradia BCP",
 					"id": "44437266-5970e927-55c8-437a-b79d-cc9b8402807f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlLBTRApis}}/LBTRServiceWeb/LBTRSwapDolaresService",
+							"host": [
+								"{{urlLBTRApis}}"
+							],
+							"path": [
+								"LBTRServiceWeb",
+								"LBTRSwapDolaresService"
+							]
+						}
 					},
 					"response": []
 				}
