@@ -15243,14 +15243,28 @@
 			"name": "Transferencias",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Transferencias MN",
 					"id": "44437266-badd6992-bb23-4fb3-8e2e-fe0b834d7379",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://172.30.7.145/LBTRServiceWeb/LBTRTransferenciaService",
+							"protocol": "http",
+							"host": [
+								"172",
+								"30",
+								"7",
+								"145"
+							],
+							"path": [
+								"LBTRServiceWeb",
+								"LBTRTransferenciaService"
+							]
+						}
 					},
 					"response": []
 				}
