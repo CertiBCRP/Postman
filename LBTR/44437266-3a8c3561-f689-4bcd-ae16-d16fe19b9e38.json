@@ -15252,13 +15252,9 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://172.30.7.145/LBTRServiceWeb/LBTRTransferenciaService",
-							"protocol": "http",
+							"raw": "{{URLCalidad}}/LBTRServiceWeb/LBTRTransferenciaService",
 							"host": [
-								"172",
-								"30",
-								"7",
-								"145"
+								"{{URLCalidad}}"
 							],
 							"path": [
 								"LBTRServiceWeb",
