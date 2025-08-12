@@ -15243,7 +15243,7 @@
 			"name": "Transferencias",
 			"item": [
 				{
-					"name": "Transferencias MN",
+					"name": "Transferencias MN-BCP",
 					"id": "44437266-badd6992-bb23-4fb3-8e2e-fe0b834d7379",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
