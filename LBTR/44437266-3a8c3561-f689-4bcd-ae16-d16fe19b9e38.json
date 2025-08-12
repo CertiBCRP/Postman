@@ -15571,7 +15571,7 @@
 					"response": []
 				},
 				{
-					"name": "Transferencias ME-BBVA Copy",
+					"name": "Transferencias ME-BBVA-BCP",
 					"event": [
 						{
 							"listen": "prerequest",
