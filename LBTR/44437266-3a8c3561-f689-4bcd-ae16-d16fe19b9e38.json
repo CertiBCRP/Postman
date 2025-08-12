@@ -15325,7 +15325,7 @@
 					"response": []
 				},
 				{
-					"name": "Transferencias MN-BCP Copy",
+					"name": "Transferencias MN-BBVA",
 					"event": [
 						{
 							"listen": "prerequest",
