@@ -15363,7 +15363,7 @@
 									"pm.environment.set(\"contadorEntidad\", refNuevo)\r",
 									"\r",
 									"//Seter referencia de operacion\r",
-									"pm.environment.set(\"ref\",\"C170 BCP-\"+entidad[contador]+currentDate.toLocaleTimeString().substring(0,8))\r",
+									"pm.environment.set(\"ref\",\"C170 BBVA-\"+entidad[contador]+currentDate.toLocaleTimeString().substring(0,8))\r",
 									"console.info(\"Detalle de operación \\nEntidad: \"+entidad[contador]+\"\\nOperacion: C261\");"
 								],
 								"type": "text/javascript",
