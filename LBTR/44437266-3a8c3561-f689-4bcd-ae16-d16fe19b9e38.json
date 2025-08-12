@@ -15275,7 +15275,7 @@
 									"}\r",
 									"var refNuevo = Number.parseInt(contador)+1;\r",
 									"\r",
-									"const x_monto = Math.floor(Math.random() * (30 - 150 + 1)) + min;\r",
+									"const x_monto = Math.floor(Math.random() * (30 - 150 + 1)) + 30;\r",
 									"pm.environment.set(\"monto\",x_monto);\r",
 									"pm.environment.set(\"cuentaDestino\", cuenta_destinoMN[contador]);\r",
 									"pm.environment.set(\"contadorEntidad\", refNuevo)\r",
