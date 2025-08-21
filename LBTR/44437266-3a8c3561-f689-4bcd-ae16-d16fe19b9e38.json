@@ -14866,7 +14866,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:logon>\r\n         <!--Optional:-->\r\n         <codigo>0003</codigo> <!--0003, 0007, 0009, 0011-->\r\n         <!--Optional:-->\r\n         <password>0007</password>\r\n         <!--Optional:-->\r\n         <ksim>0003</ksim>\r\n         <!--Optional:-->\r\n         <firma>estamifirma</firma>\r\n      </lbtr:logon>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+									"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:logon>\r\n         <!--Optional:-->\r\n         <codigo>0011</codigo> <!--0003, 0007, 0009, 0011-->\r\n         <!--Optional:-->\r\n         <password>0007</password>\r\n         <!--Optional:-->\r\n         <ksim>0003</ksim>\r\n         <!--Optional:-->\r\n         <firma>estamifirma</firma>\r\n      </lbtr:logon>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
 									"options": {
 										"raw": {
 											"language": "xml"
@@ -15468,7 +15468,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:instruirTransferencia>\r\n         <sid>00021755551922547</sid> <!--Reemplazar por nuevo SID-->\r\n         <datosTransferencia>\r\n            <codConcepto>C101</codConcepto>\r\n            <cuentaDestino>{{cuentaDestino}}</cuentaDestino>\r\n            <cuentaOrigen>12070100020100000003</cuentaOrigen>   <!--Cuenta ME del BCP-->\r\n            <datosCliente/>\r\n            <fechaLiquidacion>{{date}}</fechaLiquidacion>\r\n            <fechaRefLBTREnlace/>\r\n            <instruccionesPago>Transferencia</instruccionesPago>\r\n            <modalidad/>\r\n            <montoOperacion>{{monto}}</montoOperacion>\r\n            <numRefLBTREnlace/>\r\n            <numRefOrigen>{{ref}}</numRefOrigen>\r\n            <prioridad>8</prioridad>\r\n         </datosTransferencia>\r\n         <firma>867</firma>\r\n      </lbtr:instruirTransferencia>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:instruirTransferencia>\r\n         <sid>{{SID_BCP}}</sid> <!--Reemplazar por nuevo SID-->\r\n         <datosTransferencia>\r\n            <codConcepto>C101</codConcepto>\r\n            <cuentaDestino>{{cuentaDestino}}</cuentaDestino>\r\n            <cuentaOrigen>12070100020100000003</cuentaOrigen>   <!--Cuenta ME del BCP-->\r\n            <datosCliente/>\r\n            <fechaLiquidacion>{{date}}</fechaLiquidacion>\r\n            <fechaRefLBTREnlace/>\r\n            <instruccionesPago>Transferencia</instruccionesPago>\r\n            <modalidad/>\r\n            <montoOperacion>{{monto}}</montoOperacion>\r\n            <numRefLBTREnlace/>\r\n            <numRefOrigen>{{ref}}</numRefOrigen>\r\n            <prioridad>8</prioridad>\r\n         </datosTransferencia>\r\n         <firma>867</firma>\r\n      </lbtr:instruirTransferencia>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
 							"options": {
 								"raw": {
 									"language": "xml"
