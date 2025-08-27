@@ -14866,7 +14866,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:logon>\r\n         <!--Optional:-->\r\n         <codigo>0011</codigo> <!--0003, 0007, 0009, 0011-->\r\n         <!--Optional:-->\r\n         <password>0007</password>\r\n         <!--Optional:-->\r\n         <ksim>0003</ksim>\r\n         <!--Optional:-->\r\n         <firma>estamifirma</firma>\r\n      </lbtr:logon>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+									"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <lbtr:logon>\r\n         <!--Optional:-->\r\n         <codigo>0002</codigo> <!--0003, 0007, 0009, 0011-->\r\n         <!--Optional:-->\r\n         <password>0007</password>\r\n         <!--Optional:-->\r\n         <ksim>0003</ksim>\r\n         <!--Optional:-->\r\n         <firma>estamifirma</firma>\r\n      </lbtr:logon>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
 									"options": {
 										"raw": {
 											"language": "xml"
