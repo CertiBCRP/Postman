@@ -14901,16 +14901,13 @@
 										"id": "9628982a-1089-496e-bb4a-4013de8b646e",
 										"exec": [
 											"let id_institucion =[\"5400\",\"5401\"];\r",
-											"\r",
 											"var x = pm.environment.get(\"contadorSIDCCE\");\r",
 											"var refNuevo = Number.parseInt(x)+1;\r",
-											"\r",
 											"if(Number.parseInt(x)==2){\r",
 											"    x=0;\r",
 											"    refNuevo=1;\r",
 											"}\r",
 											"pm.environment.set(\"contadorSIDCCE\", refNuevo);\r",
-											"\r",
 											"pm.environment.set(\"ID_Institucion\", id_institucion[x]);"
 										],
 										"type": "text/javascript",
