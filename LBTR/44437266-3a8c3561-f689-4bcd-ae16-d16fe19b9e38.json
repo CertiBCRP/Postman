@@ -5646,12 +5646,13 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "332a5519-1063-4d4f-b734-29deb0015956",
+												"id": "4650612e-86eb-43c8-9997-380634395778",
 												"exec": [
 													"//Setear fecha en formato ISO 8601\r",
 													"let currentDate = new Date();\r",
 													"var moment = require('moment');\r",
 													"pm.environment.set(\"date\", moment().format('YYYY-MM-DD')+\"T\"+currentDate.toTimeString().substring(0,8)+\".004Z\");\r",
+													"console.info(pm.environment.get(\"date\"));\r",
 													"\r",
 													"var contador = pm.environment.get(\"contadorEntidad\");\r",
 													"//Se reinicia contador si esta en el tope (solo se tienen 4 entidades)\r",
@@ -5682,7 +5683,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c0500cfc-f733-4f1b-9ff6-66c0a439a1d2",
+												"id": "4a0c1b13-e0a8-4703-85e5-e69356c672a2",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {\r",
 													"    pm.response.to.have.status(200);\r",
