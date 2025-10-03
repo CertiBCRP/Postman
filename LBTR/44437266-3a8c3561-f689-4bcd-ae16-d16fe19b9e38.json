@@ -10142,7 +10142,8 @@
 													"console.info(\"Detalle de operación \\nEntidad: \"+entidad[contador]+\"\\nOperacion: C266\");"
 												],
 												"type": "text/javascript",
-												"packages": {}
+												"packages": {},
+												"requests": {}
 											}
 										},
 										{
@@ -10155,7 +10156,8 @@
 													"});"
 												],
 												"type": "text/javascript",
-												"packages": {}
+												"packages": {},
+												"requests": {}
 											}
 										}
 									],
@@ -10174,7 +10176,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <lbtr:instruirCompensacionAbonoCCE>\r\n            <sid>{{SID_CCE}}</sid>\r\n              <datosCompensacionCCE>\r\n                <codConcepto>C266</codConcepto>\r\n                <cuentaDestino>11010100030300000000</cuentaDestino>\r\n                <cuentaOrigen>{{CCE_Garantia_PEN}}</cuentaOrigen>\r\n                <fechaLiquidacion>{{date}}</fechaLiquidacion>\r\n                <instruccionesPago>Abono CCE PEN</instruccionesPago>\r\n                <montoOperacion>981.99</montoOperacion>\r\n                <numRefLBTREnlace></numRefLBTREnlace>\r\n                <numRefOrigen>{{refCCE}}</numRefOrigen>\r\n            </datosCompensacionCCE >\r\n            <firma>firma</firma>\r\n        </lbtr:instruirCompensacionAbonoCCE>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+											"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:lbtr=\"http://lbtr.bcrp.gob.pe\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <lbtr:instruirCompensacionAbonoCCE>\r\n            <sid>{{SID_CCE}}</sid>\r\n              <datosCompensacionCCE>\r\n                <codConcepto>C266</codConcepto>\r\n                <cuentaDestino>11010100030300000000</cuentaDestino>\r\n                <cuentaOrigen>{{CCE_Garantia_PEN}}</cuentaOrigen>\r\n                <fechaLiquidacion>2025-09-25T16:49:50.004Z</fechaLiquidacion>\r\n                <instruccionesPago>Abono CCE PEN</instruccionesPago>\r\n                <montoOperacion>1030.92</montoOperacion>\r\n                <numRefLBTREnlace></numRefLBTREnlace>\r\n                <numRefOrigen>{{refCCE}}</numRefOrigen>\r\n            </datosCompensacionCCE >\r\n            <firma>firma</firma>\r\n        </lbtr:instruirCompensacionAbonoCCE>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
 											"options": {
 												"raw": {
 													"language": "xml"
